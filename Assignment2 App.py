@@ -9,6 +9,12 @@ def main():
     stockL = int(input("Enter Stock Level, must be greater than 0: \n"))
     monthlyUnitsM = int(input("Enter Monthly Units Manufactured, must be greater than or equal to 0: \n"))
 
+    print(f'\nProduct code: {code}')
+    print(f'Product Name: {name}')
+    print(f'\nSale Price: {saleP} CAD')
+    print(f'Manufacture Cost: {costM} CAD')
+    print(f'Monthly Production: {monthlyUnitsM} units (Approx.)\n')
+
     if 100 <= code <= 10000 and saleP > 0 and costM > 0 and stockL > 0 and monthlyUnitsM >= 0:
         product1 = Product(code, name, saleP, costM, stockL, monthlyUnitsM)
         months = 12  

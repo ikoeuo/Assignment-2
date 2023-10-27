@@ -22,12 +22,12 @@ class Product:
         totalUnitsM = 0
         profit = 0
  
-        for i in range(1, months + 1):
+        for month in range(1, months + 1):
             unitsS = self.simulateMonthlySales()
             totalUnitsS += unitsS
             totalUnitsM += self.monthlyUnitsM
             profit += (unitsS * self.saleP) - (self.monthlyUnitsM * self.costM)
-            stockStatement = f"\nMonth {i}: Stock Level = {self.stockL}, Units Sold = {unitsS}\n"
+            stockStatement = f"\nMonth {month}: Stock Level = {self.stockL}, Units Sold = {unitsS}\n"
             
         stockStatement += f"Total Units Sold: {totalUnitsS}\n"
         stockStatement += f"Total Units Manufactured: {totalUnitsM}\n"
